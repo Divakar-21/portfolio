@@ -1,0 +1,266 @@
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+a {
+    text-decoration: none;
+}
+:root {
+    --primary-color: #333;
+    --main-bg-color : #5cdb95;
+    --main-text-color : #edf5e1;
+    --text-color : #05386b;
+  }
+html,body {
+    font-size: 14px;
+    line-height: 1.6;
+    width: 100%;
+    background: var(--main-bg-color);
+    font-family: 'Karla', sans-serif;
+    color : var(--main-text-color);
+}
+.header {
+    width: 100%;
+    padding: 2%;
+}
+nav > ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+}
+li {
+    list-style: none;
+    padding: 0 2%;
+}
+.about {
+    display : grid;
+    grid-template-columns: 3fr  2fr;
+    padding: 5% 0;
+}
+.banner-img {
+   text-align: center;
+   
+}
+.banner-text {
+    align-self: center;
+    margin-left: 18%;
+}
+.banner-text h2 {
+    
+    font-size: 40px;
+}
+.banner-text p {
+    margin-bottom : 5%; 
+    font-size : 20px;
+    color : var(--text-color);
+}
+
+.btn-banner {
+    background-color: var(--main-text-color);
+    color : var(--text-color);
+    border : 3px solid var(--text-color);
+    padding: 2%;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    
+}
+
+.about a:hover {
+    background-color: var(--text-color);
+    color : var(--main-text-color); 
+}
+
+.banner-img > .img {
+    width: 100%;
+    height: 300px;
+}
+
+.skill-img > img {
+    width: 100%;
+    height: 200px;
+}
+
+.education {
+    background-color: var(--main-text-color);
+    color : var(--text-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    padding-bottom: 5%;
+    width: 100%;
+}
+.college-icon{
+   width: 70%;
+   margin: 0 auto;
+   border: 2px solid var(--main-bg-color);
+   box-shadow: 8px 8px 5px #ddd;
+   height: 300px;
+}
+.college-icon > img {
+    width : 50px;
+    margin: 5% 0;
+}
+
+
+  .achievement {
+    grid-column: 1 / 4;
+    padding: 2% 0;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .skills {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    padding: 5% 0;
+    color : var(--text-color);
+    justify-items: center;
+}
+.skill-bar {
+  width: 75%;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 700;
+}
+.skill-bar > h3 {
+  text-align: left;
+  font-size: 20px;
+  margin-left: 30%;
+}
+.skill-border {
+  padding: 5%;
+  border: 1px dashed var(--main-text-color);
+}
+
+.section-footer {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 4rem 0;
+}
+
+.section-footer .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+}
+
+.section-footer h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.section-footer h3 {
+  margin-bottom: 0.7rem;
+}
+
+.section-footer a {
+  line-height: 1.9;
+  color: #ccc;
+}
+
+.section-footer a > i {
+  color: #555;
+  margin-right: 0.5rem;
+}
+
+.email-form {
+  width: 70%;
+  display: inline-block;
+  background-color: #555;
+  position: relative;
+  border-radius: 20px;
+  line-height: 0;
+  margin-top: 1rem;
+}
+
+/* // .form-control-wrap {
+// 	position: relative;
+// 	display: inline-block;
+// 	width: 100%;
+// } */
+
+.email-form .form-control {
+  display: inline-block;
+  border: 0;
+  outline: 0;
+  font-size: 1rem;
+  color: #ddd;
+  background-color: transparent;
+  font-family: inherit;
+  margin: 0;
+  padding: 0 3rem 0 1.5rem;
+  width: 100%;
+  height: 45px;
+  border-radius: 20px;
+}
+
+.email-form .submit {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  background-color: #eee;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  color: #333;
+  cursor: pointer;
+  border-radius: 0 20px 20px 0;
+}
+
+
+ 
+
+@media (max-width:700px) {
+  .about,.education,.skills {
+    
+    grid-template-columns: 1fr;
+
+}
+.section-footer {
+  padding: 2rem 0;
+}
+.section-footer .container {
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.section-footer div:nth-child(2),
+.section-footer div:nth-child(3) {
+  display: none;
+}
+.achievement {
+  grid-column: 1 / 2 ;
+}
+.banner-text h2 {
+  font-size: 30px;
+}
+.banner-text p {
+  font-size: 18px;
+}
+nav > ul {
+  justify-content: space-between;
+}
+  .banner-text {
+    order: 2;
+    margin-left: 15px;
+  }
+  .college-icon{
+    margin-bottom: 25px;
+  }
+  .banner-img {
+    order: 1;
+  }
+}
